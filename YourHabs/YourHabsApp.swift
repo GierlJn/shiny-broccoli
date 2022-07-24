@@ -5,10 +5,11 @@ import ComposableArchitecture
 struct YourHabsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(store: Store(initialState: AppState(habits: .mock),
+            ContentView(store: Store(initialState: AppState(context: PersistenceController.shared.container.viewContext),
                                      reducer: appReducer,
                                      environment: AppEnvrionment(mainQueue: .main,
-                                     uuid: UUID.init)))
+                                                                 managedObjectContext: PersistenceController.shared.container.viewContext,
+                                                                 uuid: UUID.init)))
         }
     }
 }

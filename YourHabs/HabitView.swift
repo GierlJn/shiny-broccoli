@@ -2,7 +2,7 @@ import SwiftUI
 import ComposableArchitecture
 
 struct HabitView: View {
-    var store: Store<Habit, HabitAction>
+    var store: Store<HabitState, HabitAction>
     
     var body: some View {
         WithViewStore(store) { viewStore in
@@ -10,15 +10,15 @@ struct HabitView: View {
                 Image(systemName: "face.smiling")
                     .resizable()
                     .frame(width: 50, height: 50)
-                Text(viewStore.name)
-                    .strikethrough(viewStore.finishedToday)
+                Text(viewStore.habit.safeName)
+                    .strikethrough(viewStore.isDoneToday)
                 Spacer()
                 VStack {
                     Image(systemName: "clock.fill")
-                    Text(String(viewStore.time) + "m")
+                    Text(String(viewStore.habit.currentDayEntry?.timeDone ?? 0) + "m")
                 }
             }
-            .opacity(viewStore.finishedToday ? 0.5 : 1.0)
+            .opacity(viewStore.isDoneToday ? 0.5 : 1.0)
             .swipeActions(edge: .leading) {
                 Button {
                     viewStore.send(.toggleFinish)
@@ -27,7 +27,7 @@ struct HabitView: View {
                 }
                 .tint(.indigo)
             }
-            .if(viewStore.finishedToday, transform: { view in
+            .if(viewStore.isDoneToday, transform: { view in
                 view
                     .swipeActions(edge: .trailing) {
                     Button {
@@ -41,18 +41,17 @@ struct HabitView: View {
             
             .padding()
         }
+        .debug()
     }
 }
 
 struct HabitView_Previews: PreviewProvider {
     static var previews: some View {
-        HabitView(store: Store(initialState: Habit(name: "Meditation",
-                                                   id: UUID(),
-                                                   finishedToday: false,
-                                                   iconName: "face.smiling",
-                                                   time: 45),
+        HabitView(store: Store(initialState: HabitState(context: .mocked, habit: Habit(context: .mocked)),
                                reducer: habitReducer,
-                               environment: HabitEnvrionment()))
+                               environment: AppEnvrionment(mainQueue: .main,
+                                                           managedObjectContext: PersistenceController.mocked.container.viewContext,
+                                                           uuid: UUID.init)))
     }
     
 }

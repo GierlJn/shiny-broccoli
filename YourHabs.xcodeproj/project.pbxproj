@@ -9,23 +9,35 @@
 /* Begin PBXBuildFile section */
 		B94E4DFD288981E400B115E3 /* HabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E4DFC288981E400B115E3 /* HabitView.swift */; };
 		B94E4DFF288988DF00B115E3 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E4DFE288988DF00B115E3 /* View+Ext.swift */; };
+		B9755B93288BFA9A00CEEED4 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9755B91288BFA9A00CEEED4 /* Model.xcdatamodeld */; };
+		B9755B99288BFF5E00CEEED4 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9755B98288BFF5E00CEEED4 /* PersistenceController.swift */; };
+		B9755B9D288C091B00CEEED4 /* NSManagedObjectContext+.Extswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9755B9C288C091B00CEEED4 /* NSManagedObjectContext+.Extswift.swift */; };
+		B9755B9F288C0B8400CEEED4 /* Calendar+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9755B9E288C0B8400CEEED4 /* Calendar+Ext.swift */; };
+		B9755BB1288C1A1000CEEED4 /* DayEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9755BB0288C1A1000CEEED4 /* DayEntry.swift */; };
+		B9755BB7288C1AA600CEEED4 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9755BB6288C1AA600CEEED4 /* Habit.swift */; };
 		B99CC94E287AFBE000E194AB /* YourHabsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99CC94D287AFBE000E194AB /* YourHabsApp.swift */; };
 		B99CC950287AFBE000E194AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99CC94F287AFBE000E194AB /* ContentView.swift */; };
 		B99CC952287AFBE200E194AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B99CC951287AFBE200E194AB /* Assets.xcassets */; };
 		B99CC955287AFBE200E194AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B99CC954287AFBE200E194AB /* Preview Assets.xcassets */; };
 		B99CC95D287AFDAB00E194AB /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B99CC95C287AFDAB00E194AB /* ComposableArchitecture */; };
-		B99CC95F287B043500E194AB /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99CC95E287B043500E194AB /* Habit.swift */; };
+		B99CC95F287B043500E194AB /* HabitState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99CC95E287B043500E194AB /* HabitState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B94E4DFC288981E400B115E3 /* HabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitView.swift; sourceTree = "<group>"; };
 		B94E4DFE288988DF00B115E3 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		B9755B92288BFA9A00CEEED4 /* Habit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Habit.xcdatamodel; sourceTree = "<group>"; };
+		B9755B98288BFF5E00CEEED4 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		B9755B9C288C091B00CEEED4 /* NSManagedObjectContext+.Extswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+.Extswift.swift"; sourceTree = "<group>"; };
+		B9755B9E288C0B8400CEEED4 /* Calendar+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Ext.swift"; sourceTree = "<group>"; };
+		B9755BB0288C1A1000CEEED4 /* DayEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEntry.swift; sourceTree = "<group>"; };
+		B9755BB6288C1AA600CEEED4 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		B99CC94A287AFBE000E194AB /* YourHabs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourHabs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B99CC94D287AFBE000E194AB /* YourHabsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourHabsApp.swift; sourceTree = "<group>"; };
 		B99CC94F287AFBE000E194AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B99CC951287AFBE200E194AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B99CC954287AFBE200E194AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B99CC95E287B043500E194AB /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		B99CC95E287B043500E194AB /* HabitState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +71,15 @@
 		B99CC94C287AFBE000E194AB /* YourHabs */ = {
 			isa = PBXGroup;
 			children = (
+				B9755B91288BFA9A00CEEED4 /* Model.xcdatamodeld */,
+				B9755BB6288C1AA600CEEED4 /* Habit.swift */,
+				B9755BB0288C1A1000CEEED4 /* DayEntry.swift */,
+				B9755B9E288C0B8400CEEED4 /* Calendar+Ext.swift */,
+				B9755B9C288C091B00CEEED4 /* NSManagedObjectContext+.Extswift.swift */,
 				B99CC94D287AFBE000E194AB /* YourHabsApp.swift */,
+				B9755B98288BFF5E00CEEED4 /* PersistenceController.swift */,
 				B99CC94F287AFBE000E194AB /* ContentView.swift */,
-				B99CC95E287B043500E194AB /* Habit.swift */,
+				B99CC95E287B043500E194AB /* HabitState.swift */,
 				B94E4DFC288981E400B115E3 /* HabitView.swift */,
 				B94E4DFE288988DF00B115E3 /* View+Ext.swift */,
 				B99CC951287AFBE200E194AB /* Assets.xcassets */,
@@ -154,11 +172,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B99CC95F287B043500E194AB /* Habit.swift in Sources */,
+				B9755B9D288C091B00CEEED4 /* NSManagedObjectContext+.Extswift.swift in Sources */,
+				B9755B9F288C0B8400CEEED4 /* Calendar+Ext.swift in Sources */,
+				B9755BB1288C1A1000CEEED4 /* DayEntry.swift in Sources */,
+				B9755B93288BFA9A00CEEED4 /* Model.xcdatamodeld in Sources */,
+				B99CC95F287B043500E194AB /* HabitState.swift in Sources */,
+				B9755BB7288C1AA600CEEED4 /* Habit.swift in Sources */,
 				B94E4DFD288981E400B115E3 /* HabitView.swift in Sources */,
 				B94E4DFF288988DF00B115E3 /* View+Ext.swift in Sources */,
 				B99CC950287AFBE000E194AB /* ContentView.swift in Sources */,
 				B99CC94E287AFBE000E194AB /* YourHabsApp.swift in Sources */,
+				B9755B99288BFF5E00CEEED4 /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +402,19 @@
 			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		B9755B91288BFA9A00CEEED4 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B9755B92288BFA9A00CEEED4 /* Habit.xcdatamodel */,
+			);
+			currentVersion = B9755B92288BFA9A00CEEED4 /* Habit.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B99CC942287AFBE000E194AB /* Project object */;
 }

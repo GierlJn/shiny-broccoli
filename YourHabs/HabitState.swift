@@ -17,6 +17,8 @@ struct HabitState: Identifiable, Equatable {
 enum HabitAction {
     case toggleFinish
     case undoFinish
+    case showDetail
+    case deleteHabit
 }
 
 let habitReducer = Reducer<HabitState, HabitAction, AppEnvrionment> { state, action, env in
@@ -31,6 +33,11 @@ let habitReducer = Reducer<HabitState, HabitAction, AppEnvrionment> { state, act
         state.habit.removeFinishToday()
         saveContext()
         state.needsRefresh.toggle()
+        return .none
+    case .showDetail:
+        //state.showDetail.toggle()
+        return .none
+    case .deleteHabit:
         return .none
     }
     

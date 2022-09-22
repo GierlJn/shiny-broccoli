@@ -18,6 +18,9 @@ struct HabitView: View {
                     Text(String(viewStore.habit.currentDayEntry?.timeDone ?? 0) + "m")
                 }
             }
+            .onTapGesture {
+                viewStore.send(.showDetail)
+            }
             .opacity(viewStore.isDoneToday ? 0.5 : 1.0)
             .swipeActions(edge: .leading) {
                 Button {
@@ -38,10 +41,8 @@ struct HabitView: View {
                     .tint(.red)
                 }
             })
-            
             .padding()
         }
-        .debug()
     }
 }
 

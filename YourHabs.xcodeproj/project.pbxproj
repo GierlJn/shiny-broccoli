@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B91CF6D6288D937F00AD8BD2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91CF6D5288D937F00AD8BD2 /* AppState.swift */; };
+		B91CF6DA288D9E2700AD8BD2 /* HabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91CF6D9288D9E2700AD8BD2 /* HabitDetailView.swift */; };
 		B94E4DFD288981E400B115E3 /* HabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E4DFC288981E400B115E3 /* HabitView.swift */; };
 		B94E4DFF288988DF00B115E3 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E4DFE288988DF00B115E3 /* View+Ext.swift */; };
 		B9755B93288BFA9A00CEEED4 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9755B91288BFA9A00CEEED4 /* Model.xcdatamodeld */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B91CF6D5288D937F00AD8BD2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		B91CF6D9288D9E2700AD8BD2 /* HabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailView.swift; sourceTree = "<group>"; };
 		B94E4DFC288981E400B115E3 /* HabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitView.swift; sourceTree = "<group>"; };
 		B94E4DFE288988DF00B115E3 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		B9755B92288BFA9A00CEEED4 /* Habit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Habit.xcdatamodel; sourceTree = "<group>"; };
@@ -52,6 +56,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B91CF6D7288D93B500AD8BD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B9755B98288BFF5E00CEEED4 /* PersistenceController.swift */,
+				B9755B91288BFA9A00CEEED4 /* Model.xcdatamodeld */,
+				B9755BB0288C1A1000CEEED4 /* DayEntry.swift */,
+				B9755BB6288C1AA600CEEED4 /* Habit.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B91CF6D8288D941A00AD8BD2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B94E4DFE288988DF00B115E3 /* View+Ext.swift */,
+				B9755B9E288C0B8400CEEED4 /* Calendar+Ext.swift */,
+				B9755B9C288C091B00CEEED4 /* NSManagedObjectContext+.Extswift.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B99CC941287AFBE000E194AB = {
 			isa = PBXGroup;
 			children = (
@@ -71,17 +96,14 @@
 		B99CC94C287AFBE000E194AB /* YourHabs */ = {
 			isa = PBXGroup;
 			children = (
-				B9755B91288BFA9A00CEEED4 /* Model.xcdatamodeld */,
-				B9755BB6288C1AA600CEEED4 /* Habit.swift */,
-				B9755BB0288C1A1000CEEED4 /* DayEntry.swift */,
-				B9755B9E288C0B8400CEEED4 /* Calendar+Ext.swift */,
-				B9755B9C288C091B00CEEED4 /* NSManagedObjectContext+.Extswift.swift */,
+				B91CF6D7288D93B500AD8BD2 /* Model */,
+				B91CF6D8288D941A00AD8BD2 /* Extensions */,
 				B99CC94D287AFBE000E194AB /* YourHabsApp.swift */,
-				B9755B98288BFF5E00CEEED4 /* PersistenceController.swift */,
 				B99CC94F287AFBE000E194AB /* ContentView.swift */,
+				B91CF6D9288D9E2700AD8BD2 /* HabitDetailView.swift */,
+				B91CF6D5288D937F00AD8BD2 /* AppState.swift */,
 				B99CC95E287B043500E194AB /* HabitState.swift */,
 				B94E4DFC288981E400B115E3 /* HabitView.swift */,
-				B94E4DFE288988DF00B115E3 /* View+Ext.swift */,
 				B99CC951287AFBE200E194AB /* Assets.xcassets */,
 				B99CC953287AFBE200E194AB /* Preview Content */,
 			);
@@ -175,9 +197,11 @@
 				B9755B9D288C091B00CEEED4 /* NSManagedObjectContext+.Extswift.swift in Sources */,
 				B9755B9F288C0B8400CEEED4 /* Calendar+Ext.swift in Sources */,
 				B9755BB1288C1A1000CEEED4 /* DayEntry.swift in Sources */,
+				B91CF6D6288D937F00AD8BD2 /* AppState.swift in Sources */,
 				B9755B93288BFA9A00CEEED4 /* Model.xcdatamodeld in Sources */,
 				B99CC95F287B043500E194AB /* HabitState.swift in Sources */,
 				B9755BB7288C1AA600CEEED4 /* Habit.swift in Sources */,
+				B91CF6DA288D9E2700AD8BD2 /* HabitDetailView.swift in Sources */,
 				B94E4DFD288981E400B115E3 /* HabitView.swift in Sources */,
 				B94E4DFF288988DF00B115E3 /* View+Ext.swift in Sources */,
 				B99CC950287AFBE000E194AB /* ContentView.swift in Sources */,

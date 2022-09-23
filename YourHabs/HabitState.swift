@@ -21,7 +21,7 @@ enum HabitAction {
     case deleteHabit
 }
 
-let habitReducer = Reducer<HabitState, HabitAction, AppEnvrionment> { state, action, env in
+let habitReducer = Reducer<HabitState, HabitAction, Main.Environment> { state, action, env in
     switch action {
     case .toggleFinish:
         setCurrentDayIfNeeded()
@@ -49,7 +49,7 @@ let habitReducer = Reducer<HabitState, HabitAction, AppEnvrionment> { state, act
     
     func saveContext() {
         do {
-            try env.managedObjectContext.save()
+            try env.context.save()
         } catch {
             fatalError()
         }

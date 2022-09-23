@@ -11,9 +11,8 @@ struct HabitDetailView: View {
                 Button {
                     viewStore.send(.deleteHabit)
                 } label: {
-                    Text("Delte")
+                    Text("Delete")
                 }
-
             }
         }
     }
@@ -23,8 +22,6 @@ struct HabitDetailView_Previews: PreviewProvider {
     static var previews: some View {
         HabitDetailView(store: Store(initialState: HabitState(context: .mocked, habit: Habit(context: .mocked)),
                                reducer: habitReducer,
-                               environment: AppEnvrionment(mainQueue: .main,
-                                                           managedObjectContext: PersistenceController.mocked.container.viewContext,
-                                                           uuid: UUID.init)))
+                                     environment: Main.Environment.preview))
     }
 }

@@ -50,9 +50,7 @@ struct HabitView_Previews: PreviewProvider {
     static var previews: some View {
         HabitView(store: Store(initialState: HabitState(context: .mocked, habit: Habit(context: .mocked)),
                                reducer: habitReducer,
-                               environment: AppEnvrionment(mainQueue: .main,
-                                                           managedObjectContext: PersistenceController.mocked.container.viewContext,
-                                                           uuid: UUID.init)))
+                               environment: Main.Environment.preview))
     }
     
 }

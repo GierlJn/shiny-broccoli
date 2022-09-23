@@ -3,14 +3,14 @@ import ComposableArchitecture
 import CoreData
 
 struct ContentView: View {
-    var store: Store<AppState, AppAction>
+    var store: Store<Main.State, Main.Action>
     
     var body: some View {
         WithViewStore(store) { viewStore in
             VStack {
                 List {
                     ForEachStore(
-                        self.store.scope(state: \.habits, action: AppAction.habit(id:action:))
+                        self.store.scope(state: \.habits, action: Main.Action.habit(id:action:))
                     ) {
                         HabitView(store: $0)
                     }
@@ -20,8 +20,6 @@ struct ContentView: View {
                 } label: {
                     Text("delte")
                 }
-            
-//
 //                .sheet(isPresented: viewStore.binding(get: { $0.showDetail },
 //                                                      send: AppAction.showDetail)) {
 //                    HabitDetailView(store: store)
@@ -38,10 +36,8 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(store: Store(initialState: AppState(context: PersistenceController.mocked.container.viewContext),
-                                 reducer: appReducer,
-                                 environment: AppEnvrionment(mainQueue: .main,
-                                                             managedObjectContext: PersistenceController.mocked.container.viewContext,
-                                                             uuid: UUID.init)))
+        ContentView(store: Store(initialState: Main.State(),
+                                 reducer: Main.reducer,
+                                 environment: Main.Environment.preview))
     }
 }

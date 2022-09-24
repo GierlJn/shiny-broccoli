@@ -20,13 +20,14 @@ struct ContentView: View {
                 } label: {
                     Text("delte")
                 }
-//                .sheet(isPresented: viewStore.binding(get: { $0.showDetail },
-//                                                      send: AppAction.showDetail)) {
-//                    HabitDetailView(store: store)
-//                }
-
+                
+                .sheet(item: viewStore.binding(get: \.selectedHabit,
+                                               send: Main.Action.setSelectedHabitSheet(habit:))) { _ in
+                    IfLetStore(self.store.scope(state: \.selectedHabit, action: Main.Action.selectedHabit)) {
+                        HabitDetailView(store: $0)
+                    }
+                }
             }
-            
             .onAppear {
                 viewStore.send(.onAppear)
             }
